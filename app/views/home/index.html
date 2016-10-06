@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<!-- Include head -->
-    <meta charset="utf-8">
-	<meta name="robots" content="all,follow">
-	<meta name="googlebot" content="index,follow,snippet,archive">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="MiminkoRo e-commerce baby store">
-	<meta name="keywords" content="">
-
-	<title>
-	    Miminko.Ru
-	</title>
-
-	<meta name="keywords" content="">
-
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
-
-	<!-- styles -->
-	<link href="../../assets/stylesheets/font-awesome.css" rel="stylesheet">
-	<link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet">
-	<link href="../../assets/stylesheets/animate.min.css" rel="stylesheet">
-	<link href="../../assets/stylesheets/owl.carousel.css" rel="stylesheet">
-	<link href="../../assets/stylesheets/owl.theme.css" rel="stylesheet">
-
-	<link href="../../assets/stylesheets/style.mono.css" rel="stylesheet" id="theme-stylesheet">
-
-	<link href="../../assets/stylesheets/custom.css" rel="stylesheet">
-
-	<script src="../../assets/javascripts/respond.min.js"></script>
-
-	<link rel="shortcut icon" href="favicon.png">
+	<%= render "partials/head" %>
 </head>
 <body>
-	<script type="text/ng-template" id="body.html">
-	  <div>This is my sample template</div>
-	</script>
+    <%= render "partials/topbar" %>
+    <%= render "partials/navbar" %>
+    <div id="all">
+    	<div id="content">
+        	<%= render "partials/slider" %>	
+        	<%= render "partials/advantages" %>	
+		</div>
+        
+        <%= render "partials/footer" %>
+        <%= render "partials/copyrights" %>
+        
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/front.js"></script>
 </body>
 </html>
