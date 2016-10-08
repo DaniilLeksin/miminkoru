@@ -14,3 +14,8 @@
   border: none;
   border-bottom: 1px solid transparent;
 }*/
+
+#footer .social {
+  text-align: left;
+  margin-top: 20px;
+}
