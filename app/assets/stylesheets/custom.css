@@ -15,6 +15,9 @@
   border-bottom: 1px solid transparent;
 }*/
 
+#footer {
+	margin-top: 30px;
+}
 #footer .social {
   text-align: left;
   margin-top: 20px;

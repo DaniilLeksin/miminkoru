@@ -8,12 +8,12 @@ gulp.task('build:styles', function () {
 });
 
 gulp.task('build:scripts', function () {
-  gulp.src('app/assets/javascripts/*.js')
+  gulp.src('app/assets/javascripts/**/*.js')
       .pipe(gulp.dest('public/js'))
 });
 
 gulp.task('build:images', function () {
-  gulp.src('app/assets/images/*.*')
+  gulp.src('app/assets/images/**/*.*')
       .pipe(gulp.dest('public/img'))
 });
 
