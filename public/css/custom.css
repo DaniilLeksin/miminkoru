@@ -18,11 +18,32 @@
 #footer {
 	margin-top: 30px;
 }
+
 #footer .social {
   text-align: left;
   margin-top: 20px;
 }
 
-.img {
-	padding-top: -5px;
+.box {
+  margin: 10px 0 30px;
+  padding: 0px;
+}
+
+#hot h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ribbon .theribbon {
+  width: 86px;
+  padding: 6px 20px 6px 10px;
+}
+
+.partners {
+  text-align: left;
+}
+
+.navbar-brand {
+  padding: 5px 15px;
 }
