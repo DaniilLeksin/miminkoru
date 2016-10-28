@@ -21,24 +21,20 @@
         <!--/.navbar-header -->
         <div class="navbar-collapse collapse" id="navigation">
             <ul class="nav navbar-nav navbar-left">
+            <% @categories.each do |category| %>
                 <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">малышам <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200"><%= category.name %> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
                             <div class="yamm-content">
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <ul>
-                                            <li><a href="category.html">Комбинезоны</a>
-                                            </li>
-                                            <li><a href="category.html">Бодики</a>
-                                            </li>
-                                            <li><a href="category.html">Футболки</a>
-                                            </li>
-                                            <li><a href="category.html">Платья / Юбки</a>
-                                            </li>
-                                            <li><a href="category.html">Штаны</a>
-                                            </li>
+                                            <% @products.each do |product| %>
+                                                <li><a href="category.html"><%= product.name %></a>
+                                                </li>
+                                            <% end %>    
+                                            
                                         </ul>
                                     </div>
                                     <div class="col-sm-3 hidden-xs">
@@ -69,93 +65,7 @@
                     </ul>
                 </li>
 
-                <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Мальчикам <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="yamm-content">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <ul>
-                                            <li><a href="category.html">Футболки</a>
-                                            </li>
-                                            <li><a href="category.html">Штаны</a>
-                                            </li>
-                                            <li><a href="category.html">Джемперы</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-3 hidden-xs">
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 hidden-xs">    
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                     <div class="col-sm-3 hidden-xs">    
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.yamm-content -->
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown yamm-fw">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Девочкам <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="yamm-content">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <ul>
-                                            <li><a href="index.html">Платья / Юбки</a>
-                                            </li>
-                                            <li><a href="category.html">Футболки</a>
-                                            </li>
-                                            <li><a href="category-right.html">Джемперы</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-sm-3 hidden-xs">
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 hidden-xs">    
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 hidden-xs">    
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.yamm-content -->
-                        </li>
-                    </ul>
-                </li>
+                <% end %>
             </ul>
 
         </div>
