@@ -36,7 +36,7 @@
 }
 
 .ribbon .theribbon {
-  width: 86px;
+  width: 100px;
   padding: 6px 20px 6px 10px;
 }
 
@@ -58,8 +58,4 @@ a, h1, h2, h3, h4, p {
 
 .navbar .yamm-content ul li a {
   /* font-size: 18px; */
-}
-
-.owl-carousel  .owl-item {
-  margin 5px;
 }

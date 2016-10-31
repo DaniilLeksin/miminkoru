@@ -8,11 +8,9 @@
     </div>
     <div class="container">
         <div class="product-slider">
-        	<%= render :partial => 'partials/item' %>
-        	<%= render :partial => 'partials/item' %>
-        	<%= render :partial => 'partials/item' %>
-        	<%= render :partial => 'partials/item' %>
-        	<%= render :partial => 'partials/item' %>
+        <% @items.shuffle.take(9).each do |item| %>
+        	<%= render :partial => 'partials/item', locals: {item: item} %>
+        <% end %>	
         </div>
     </div>
 </div>

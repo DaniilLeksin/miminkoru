@@ -18,27 +18,34 @@
             <img src="http://placehold.it/450x600" alt="" class="img-responsive">
         </a>
         <div class="text">
-            <h3><a href="detail.html">Белая Майка Армани</a></h3>
-            <p class="price"><del>₽280</del> ₽143.00</p>
+            <h3><a href="detail.html"><%= item.name %></a></h3>
+            <% if item.sale == 0 %>
+                <p class="price">₽<%= item.coast %></p>
+            <% else %>    
+                <p class="price"><del>₽<%= item.coast %></del> ₽<%= item.coast - (item.coast * item.sale / 100) %></p>
+            <% end %>    
         </div>
         <!-- /.text -->
-
-        <div class="ribbon sale">
-            <div class="theribbon t-sale">SALE</div>
-            <div class="ribbon-background"></div>
-        </div>
+        <% if item.sale > 0 %> 
+            <div class="ribbon sale">
+                <div class="theribbon t-sale">SALE <%= item.sale%> %</div>
+                <div class="ribbon-background"></div>
+            </div>
+        <% end %>    
         <!-- /.ribbon -->
-
-        <div class="ribbon new">
-            <div class="theribbon">НОВИНКА</div>
-            <div class="ribbon-background"></div>
-        </div>
+        <% if item.new == true %>
+            <div class="ribbon new">
+                <div class="theribbon">НОВИНКА</div>
+                <div class="ribbon-background"></div>
+            </div>
+        <% end %>    
         <!-- /.ribbon -->
-
-        <div class="ribbon gift">
-            <div class="theribbon">ПОДАРОК</div>
-            <div class="ribbon-background"></div>
-        </div>
+        <% if item.gift == true %>
+            <div class="ribbon gift">
+                <div class="theribbon">ПОДАРОК</div>
+                <div class="ribbon-background"></div>
+            </div>
+        <% end %>    
         <!-- /.ribbon -->
     </div>
     <!-- /.product -->
