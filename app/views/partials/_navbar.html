@@ -39,27 +39,19 @@
                                             
                                         </ul>
                                     </div>
-                                    <div class="col-sm-3 hidden-xs">
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 hidden-xs">    
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                     <div class="col-sm-3 hidden-xs">    
-                                        <div class="banner">
-                                            <a href="#">
-                                                <img src="http://placehold.it/620x410" class="img img-responsive" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <% @products.shuffle.take(3).each do |product| %>
+                                        <% if product.category_id == category.category_id %> 
+                                            <div class="col-sm-3 hidden-xs">
+                                                <div class="banner">
+                                                    <a href="#">
+                                                        <img src="<%= product.banner_url %>" class="img img-responsive" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        <% end %>    
+                                    <% end %>    
+                                    
+                                    
                                 </div>
                             </div>
                             <!-- /.yamm-content -->
