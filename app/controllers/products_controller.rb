@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
 	end
 
 	def show
-		@items_by_category = Item.where(:category_id => params[:id])
+		@items_by_product_id = Item.where(:product_id => params[:id])
+		@products_by_category = Product.where(:category_id => params[:id])
 		@products = Product.all
     end
 end

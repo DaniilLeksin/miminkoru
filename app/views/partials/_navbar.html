@@ -31,7 +31,7 @@
                                     <div class="col-sm-3">
                                         <ul>
                                             <% @products.all.product_by_category(category.category_id).each do |product| %>
-                                                <li><a href="category.html"><%= product.name %></a>
+                                                <li><a href="products/<%= product.id %>"><%= product.name %></a>
                                                 </li>
                                             <% end %>
                                             
@@ -40,7 +40,7 @@
                                     <% @products.all.product_by_category(category.category_id).shuffle.take(3).each do |product| %>
                                         <div class="col-sm-3 hidden-xs">
                                             <div class="banner">
-                                                <a href="#">
+                                                <a href="products/<%= product.id %>">
                                                     <img src="<%= product.banner_url %>" class="img img-responsive" alt="">
                                                 </a>
                                             </div>

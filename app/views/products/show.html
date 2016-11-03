@@ -1,7 +1,14 @@
-<% @items_by_category.each do |item| %>
+<p>Список товаров в выбранном продукте</p>
+<% @items_by_product_id.each do |item| %>
 <p><%= item.name %></p>
 <% end %>
-
+<hr>
+<p>Список продуктов в выбранной категории</p>
+<% @products_by_category.each do |product| %>
+<p><%= product.name %></p>
+<% end %>
+<hr>
+<p>Список всех продуктов</p>
 <% @products.each do |product| %>
 <p><%= product.name %></p>
 <% end %>
