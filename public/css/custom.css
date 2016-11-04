@@ -59,3 +59,7 @@ a, h1, h2, h3, h4, p {
 .navbar .yamm-content ul li a {
   /* font-size: 18px; */
 }
+
+.box {
+  padding: 20px
+}
