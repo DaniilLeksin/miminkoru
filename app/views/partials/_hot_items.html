@@ -9,7 +9,9 @@
     <div class="container">
         <div class="product-slider">
         <% @items.shuffle.take(9).each do |item| %>
-        	<%= render :partial => 'partials/item', locals: {item: item} %>
+            <div class="item">
+        	   <%= render :partial => 'partials/item', locals: {item: item} %>
+            </div>   
         <% end %>	
         </div>
     </div>

@@ -1,14 +1,59 @@
-<p>Список товаров в выбранном продукте</p>
-<% @items_by_product_id.each do |item| %>
-<p><%= item.name %></p>
-<% end %>
-<hr>
-<p>Список продуктов в выбранной категории</p>
-<% @products_by_category.each do |product| %>
-<p><%= product.name %></p>
-<% end %>
-<hr>
-<p>Список всех продуктов</p>
-<% @products.each do |product| %>
-<p><%= product.name %></p>
-<% end %>
+<!-- 
+	<p>Список товаров в выбранном продукте</p>
+	<% @items_by_product_id.each do |item| %>
+	<p><%= item.name %></p>
+	<% end %>
+	<hr>
+	<p>Список продуктов в выбранной категории</p>
+	<% @products_by_category.each do |product| %>
+	<p><%= product.name %></p>
+	<% end %>
+	<hr>
+	<p>Список всех продуктов</p>
+	<% @products.each do |product| %>
+	<p><%= product.name %></p>
+	<% end %>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%= render "partials/products_head" %>
+</head>
+
+<body>
+<%= render "partials/navbar" %>
+<div id="all">
+	<div id="content">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="row products">
+					<% @items_by_product_id.each do |item| %>
+					<div class="col-md-3 col-sm-4">
+						<%= render :partial => 'partials/item', locals: {item: item} %>
+					</div>
+					<% end %>	
+				</div>
+				<!-- /.products -->
+			</div>
+			<!-- /.col-md-9 -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /#content -->
+	<%= render "partials/footer" %>
+	<%= render "partials/copyrights" %>
+</div>
+<!-- /#all -->
+<!-- *** SCRIPTS TO INCLUDE ***
+_________________________________________________________ -->
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/waypoints.min.js"></script>
+<script src="../js/modernizr.js"></script>
+<script src="../js/bootstrap-hover-dropdown.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/front.js"></script>
+
+</body>
+</html>
