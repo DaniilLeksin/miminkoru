@@ -24,7 +24,11 @@
                 <h1 class="text-center"><%= @item.name %></h1>
                 <p class="goToDescription"><a href="#details" class="scroll-to">Перейти к описанию</a>
                 </p>
-                <p class="price">$124.00</p>
+                <% if item.sale == 0 %>
+                    <p class="price">₽ <%= item.coast %></p>
+                <% else %>    
+                    <p class="price"><del>₽<%= item.coast %></del> ₽ <%= item.coast - (item.coast * item.sale / 100) %></p>
+                <% end %>
 
                 <p class="text-center buttons">
                     <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a> 
@@ -35,18 +39,18 @@
 
             <div class="row" id="thumbs">
                 <div class="col-xs-4">
-                    <a href="img/detailbig1.jpg" class="thumb">
-                        <img src="img/detailsquare.jpg" alt="" class="img-responsive">
+                    <a href="<%= @item.detail_image_url_one %>" class="thumb">
+                        <img src="<%= @item.detail_image_url_one %>" alt="" class="img-responsive">
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="img/detailbig2.jpg" class="thumb">
-                        <img src="img/detailsquare2.jpg" alt="" class="img-responsive">
+                    <a href="<%= @item.detail_image_url_two %>" class="thumb">
+                        <img src="<%= @item.detail_image_url_two %>" alt="" class="img-responsive">
                     </a>
                 </div>
                 <div class="col-xs-4">
-                    <a href="img/detailbig3.jpg" class="thumb">
-                        <img src="img/detailsquare3.jpg" alt="" class="img-responsive">
+                    <a href="<%= @item.detail_image_url_three %>" class="thumb">
+                        <img src="<%= @item.detail_image_url_three %>" alt="" class="img-responsive">
                     </a>
                 </div>
             </div>
