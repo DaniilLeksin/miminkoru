@@ -63,3 +63,27 @@ a, h1, h2, h3, h4, p {
 .box {
   padding: 20px
 }
+
+.price del {
+    color: #999999;
+}
+
+#content #mainImage {
+  margin-top: 10px;
+}
+
+#content .product {
+  margin-top: 10px;
+}
+
+#content #details .social p a.vk {
+  background-color: #2a5885;
+}
+
+#content #details .social p a.instagram {
+  background-color: #cd4378;
+}
+
+#footer .social a.vk:hover {
+  background-color: #2a5885;
+}
