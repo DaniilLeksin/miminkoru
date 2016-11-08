@@ -87,3 +87,7 @@ a, h1, h2, h3, h4, p {
 #footer .social a.vk:hover {
   background-color: #2a5885;
 }
+
+.small-logo {
+  padding-top: 15px;
+}

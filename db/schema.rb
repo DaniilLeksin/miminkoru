@@ -50,13 +50,11 @@ ActiveRecord::Schema.define(version: 20161107095725) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "category_id"
     t.string   "name"
     t.string   "banner_url"
-    t.string   "banner_back_url"
-    t.string   "banner_front_url"
     t.string   "description"
   end
 
