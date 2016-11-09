@@ -1,6 +1,6 @@
 /** Your theme modifications here **/
 /*#top {
-	background: #fff;
+  background: #fff;
 }
 
 #top ul.menu > li a {
@@ -16,7 +16,7 @@
 }*/
 
 #footer {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 #footer .social {
@@ -26,7 +26,6 @@
 
 .box {
   margin: 10px 0 30px;
-  padding: 0px;
 }
 
 #hot h2 {
@@ -49,15 +48,15 @@
 }
 
 a, h1, h2, h3, h4, p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .navbar ul.nav > li > a {
-  /* font-size: 20px; */
+  font-size: 20px;
 }
 
 .navbar .yamm-content ul li a {
-  /* font-size: 18px; */
+  font-size: 14px;
 }
 
 .box {
@@ -90,4 +89,24 @@ a, h1, h2, h3, h4, p {
 
 .small-logo {
   padding-top: 15px;
+}
+
+.slider-background {
+  background-color: #FFF;
+  padding-top: 20px;
+}
+
+.ads-banner {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.img-detailed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.background-detailed {
+  background-color: #fff;
 }
