@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107095725) do
+ActiveRecord::Schema.define(version: 20161111122516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,14 +39,15 @@ ActiveRecord::Schema.define(version: 20161107095725) do
     t.boolean  "new"
     t.integer  "sale"
     t.boolean  "gift"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "banner_front_url"
     t.string   "banner_back_url"
     t.integer  "product_id"
     t.string   "detail_image_url_one"
     t.string   "detail_image_url_two"
     t.string   "detail_image_url_three"
+    t.integer  "dimensions",             default: [],              array: true
   end
 
   create_table "products", force: :cascade do |t|

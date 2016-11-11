@@ -31,11 +31,28 @@
                 <h1 class="text-center"><%= @item.name %></h1>
                 <p class="goToDescription"><a href="#details" class="scroll-to">Перейти к описанию</a>
                 </p>
+
                 <% if item.sale == 0 %>
                     <p class="price">₽<%= item.coast %></p>
                 <% else %>    
                     <p class="price"><del>₽<%= item.coast %></del> ₽ <%= item.coast - (item.coast * item.sale / 100) %></p>
                 <% end %>
+
+                <div class="item-info">
+
+                    <p>Артикул: <%= item.id %></p>
+                    <p>Цвет: Добавить цвет</p>
+                    <p>Состав: Добавить Состав</p>
+                    <p>Артикул: <%= item.id %></p>
+
+                    <div class="btn-group dimensions" data-toggle="buttons">
+                        <p>Размеры:</p>
+                        <% item.dimensions.each do |dimension| %>
+                            <button class="btn btn-default">
+                            <input type="radio" name="options"><%= dimension %></button>
+                        <% end %>
+                    </div>
+                </div>    
                 <p class="text-center buttons">
                     <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Добавить в корзину</a> 
                 </p>
