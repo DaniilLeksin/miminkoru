@@ -30,7 +30,7 @@
                                 <div class="row">
                                     <div class="col-sm-3">
                                         <ul>
-                                            <% @products.all.product_by_category(category.category_id).each do |product| %>
+                                            <% @products.all.product_by_category(category.category_id).sort.each do |product| %>
                                                 <li><a href="/products/<%= product.id %>"><%= product.name %></a>
                                                 </li>
                                             <% end %>
