@@ -36,4 +36,15 @@ Item.create! id:4, name:"item4", coast:12, category_id:2, sale:0, img_url:"/img/
 Item.create! id:5, name:"item5", coast:12, category_id:2, sale:0, img_url:"/img/items/i0003.jpg", product_id:6
 Item.create! id:6, name:"item6", coast:12, category_id:2, sale:0, img_url:"/img/items/i0003.jpg", product_id:6
 
+Dimension.delete_all
+Dimension.create! id:1, item_id:1, dimension:52, status:'active'
+Dimension.create! id:2, item_id:1, dimension:54, status:'active'
+Dimension.create! id:3, item_id:1, dimension:56, status:'active'
+Dimension.create! id:4, item_id:1, dimension:58, status:'active'
+Dimension.create! id:5, item_id:4, dimension:52, status:'active'
+Dimension.create! id:6, item_id:4, dimension:54, status:'ordered'
+Dimension.create! id:7, item_id:4, dimension:56, status:'sold'
+Dimension.create! id:8, item_id:4, dimension:58, status:'sold'
+
+
 

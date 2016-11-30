@@ -47,9 +47,9 @@
 
                     <div class="btn-group dimensions" data-toggle="buttons">
                         <p>Размеры:</p>
-                        <% item.dimensions.each do |dimension| %>
+                        <% @dimensions.each do |dimension| %>
                             <button class="btn btn-default">
-                            <input type="radio" name="options"><%= dimension %></button>
+                            <input type="radio" name="options"><%= dimension.dimension %></button>
                         <% end %>
                     </div>
                 </div>    

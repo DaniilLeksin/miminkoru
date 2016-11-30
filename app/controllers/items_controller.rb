@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 		@products = Product.all
 		@categories = Category.all
+		@dimensions = Dimension.where(:item_id => params[:id], :status => 'active')
 		@items = Item.all
 	end
 
