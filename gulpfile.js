@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 	runSequence = require('run-sequence');
   
 gulp.task('build:styles', function () {
-  gulp.src('app/assets/stylesheets/*.css')
+  gulp.src('app/assets/stylesheets/**/*.css')
       .pipe(gulp.dest('public/css'))
 });
 
@@ -18,7 +18,7 @@ gulp.task('build:images', function () {
 });
 
 gulp.task('build:fonts', function () {
-  gulp.src('app/assets/stylesheets/fonts/*.*')
+  gulp.src('app/assets/stylesheets/fonts/**/*.*')
       .pipe(gulp.dest('public/css/fonts'))
 });
 
