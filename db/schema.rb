@@ -11,16 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161018094527) do
+ActiveRecord::Schema.define(version: 20161205085248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ads", force: :cascade do |t|
+    t.string   "banner_url"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "detailed_items", force: :cascade do |t|
+    t.integer  "item_id"
+    t.integer  "dimension"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -32,6 +47,29 @@ ActiveRecord::Schema.define(version: 20161018094527) do
     t.boolean  "new"
     t.integer  "sale"
     t.boolean  "gift"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "banner_front_url"
+    t.string   "banner_back_url"
+    t.integer  "product_id"
+    t.string   "detail_image_url_one"
+    t.string   "detail_image_url_two"
+    t.string   "detail_image_url_three"
+    t.integer  "dimensions",             default: [],              array: true
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.string   "name"
+    t.string   "banner_url"
+    t.string   "description"
+  end
+
+  create_table "sizes", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

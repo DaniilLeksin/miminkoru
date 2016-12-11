@@ -4,46 +4,34 @@
             <div class="col-md-3 col-sm-6">
                 <h4>О нас</h4>
                 <ul>
-                    <li><a href="text.html">О Miminko.Ru</a>
+                    <li><a href="#">О Miminko.Ru</a>
                     </li>
-                    <li><a href="text.html">Публичная оферта</a>
+                    <li><a href="#">Публичная оферта</a>
                     </li>
-                    <li><a href="contact.html">Контакты</a>
+                    <li><a href="#">Контакты</a>
                     </li>
                 </ul>
-                <hr>    
+                    
             </div>
             <!-- /.col-md-3 -->
-            <div class="col-md-3 col-sm-6">
-                <h4>Для мальчиков</h4>
-                <ul>
-                    <li><a href="category.html">Комбинезоны</a>
-                    </li>
-                    <li><a href="category.html">Майки</a>
-                    </li>
-                    <li><a href="category.html">Нижнее белье</a>
-                    </li>
-                </ul>
-                <hr>
-            </div>    
-            <div class="col-md-3 col-sm-6">
-                <h4>Для девочек</h4>
-                <ul>
-                    <li><a href="category.html">Комбинезоны</a>
-                    </li>
-                    <li><a href="category.html">Майки</a>
-                    </li>
-                    <li><a href="category.html">Нижнее белье</a>
-                    </li>
-                </ul>
-                <hr class="hidden-md hidden-lg">
-            </div>
+            <% @categories.each do |category| %>
+                <div class="col-md-3 col-sm-6">
+                    <h4><%= category.name %></h4>
+                    <ul>
+                    <% @products.all.product_by_category(category.category_id).each do |product| %>
+                        <li><a href="/products/<%= product.id %>"><%= product.name %></a>
+                        </li>
+                    <% end %>    
+                    </ul>
+                    
+                </div>    
+            <% end %>    
             <!-- /.col-md-3 -->
 
             <div class="col-md-3 col-sm-6">
                 <h4>Отслеживайте нас</h4>
                 <p class="social">
-                    <a href="#" class="facebook external" data-animate-hover="shake"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="vk external" data-animate-hover="shake"><i class="fa fa-vk"></i></a>
                     <a href="#" class="twitter external" data-animate-hover="shake"><i class="fa fa-twitter"></i></a>
                     <a href="#" class="instagram external" data-animate-hover="shake"><i class="fa fa-instagram"></i></a>
                     <a href="#" class="email external" data-animate-hover="shake"><i class="fa fa-envelope"></i></a>
@@ -55,6 +43,7 @@
     </div>
     <!-- /.container -->
 </div>
+
 <!-- /#footer -->
 
 <!-- *** FOOTER END *** -->
